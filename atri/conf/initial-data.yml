@@ -1,0 +1,91 @@
+# Test data
+
+User(ranjith):
+    email:          ranjith@gmail.com
+    password:       secret
+    fullname:       ranjith
+    isAdmin:        true
+    
+User(chary):
+    email:          chary@gmail.com
+    password:       secret
+    fullname:       chary    
+    
+User(sankeerth):
+    email:          sankeerth@gmail.com
+    password:       secret
+    fullname:       sankeerth    
+    
+Tag(play):
+    name:           Play
+    
+Tag(architecture):
+    name:           Architecture
+    
+Tag(test):
+    name:           Test
+    
+Tag(mvc):
+    name:           MVC    
+    
+Post(firstranjithPost):
+    title:           labs under renovation
+ 
+    postedAt:       2012-02-10
+    author:         ranjith
+    tags:           
+                    - play
+                    - architecture
+    content:        >
+                    atri labs were finally under renovation,after a protractive negotiations among the 
+                    director(prabhu g benkop) and our chairman(ramesh babu)
+                     
+                    final years response :
+                    here,now its an end to the serious problem of atri college,as we felt very difficult 
+                    in our previous semisters,due to lack of facilites and juniors are very lucky as they
+                    are going to have a very good environment with all the facilities available to them.
+
+Post(secondranjithPost):
+    title:          Just a test of atri engine
+    postedAt:       2012-02-06
+    author:         ranjith
+    tags:           
+                    - test
+    content:        >
+                    Well, it's just a test.
+                    
+Post(charyPost):
+    title:          oncampus placements
+    postedAt:       2012-02-09
+    author:         chary
+    tags:           
+                    - play
+                    - architecture
+                    - mvc
+    content:        >
+                     most of the companies were ignoring our college for hiring due to lack of 
+                     facilites,for example,three days ago wipro came to our college and the 
+                     recruitments process was took place in class rooms,where its a shy on 
+                     our management.                    
+                
+                    
+Comment(c1):
+    author:         abhimanyu
+    content:        >
+                    You are right !
+    postedAt:       2012-02-10
+    post:           firstranjithPost
+    
+Comment(c2):
+    author:         raja Don
+    content:        >
+                    I knew that ...
+    postedAt:       2012-02-10
+    post:           firstranjithPost    
+    
+Comment(c3):
+    author:         bhattu
+    content:        >
+                    This post is useless...,i support nagraj sir.
+    postedAt:       2012-02-09
+    post:           secondranjithPost    
