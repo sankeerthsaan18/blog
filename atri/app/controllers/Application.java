@@ -17,10 +17,17 @@ public class Application extends Controller {
         renderArgs.put("blogBaseline", Play.configuration.getProperty("blog.baseline"));
     }
  
-    public static void index() {
+    public static void index(int value) {
         Post frontPost = Post.find("order by postedAt desc").first();
         List<Post> olderPosts = Post.find("order by postedAt desc").from(1).fetch(10);
-        render(frontPost, olderPosts);
+             if(value==0 && i==0){
+            i=i+1;
+                             
+        }
+        else{value=value+1;
+               
+        }
+        render(frontPost, olderPosts,value);
     }
     
     public static void show(Long id) {
