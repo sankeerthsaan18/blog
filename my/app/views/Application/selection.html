@@ -1,0 +1,54 @@
+﻿#{extends 'main.html' /}
+<html>
+    <title>IVR WIDGET</title>
+<body>
+<div class="topbar">     
+ <div class="topbar-inner">      
+  <div class="container-fluid"> 
+     <ul class="pills">     
+     <li><a class="brand" href="@{Application.index()}" class="active">IVR WIDGETS</a></li>             
+ <li ><a href="@{Application.wedding()}" >WEDDINGS</a></li>          
+  <li><a href="@{Application.medical()}" >MEDICAL ENQUIRIES</a></li>      
+      <li><a href="@{Application.fest()}">COLLEGE FESTS</a></li>        
+   <li><a href="@{Application.resr()}" >TICKET ENQUIRIES</a></li>    
+       <li><a href="@{Application.coni()}" >CONTACT US</a></li> 
+        <li><a href="@{Application.DET()}" >USERS</a></li> 
+<li><a href="logout" >SIGN OUT</a></li> 
+<li><a href="selection" >SELECTION</a></li> 
+ </ul>
+                     
+  </div></div></div>
+    <table>
+        <tr>  <td>  
+   <img src="@{'/public/images/Capture.png'}"   height="50%" width="50%" /><BR><br><br> 
+   </td>
+   <td>
+    <div class="span4">  
+    #{form @store()}
+     #{field 'username'}
+    <label for="username" class="username-field">USERNAME:</label>
+               <input type="text" name="username" id="username" value="${flash.username}" />
+        #{/field}
+        CHOOSE
+        <label for="num">  phone number:</label>
+       #{field 'phno'}  
+        <select id="phno" name="phno">
+<option value=00>select</option>
+<option value=197500>197500</option>
+<option value=197600>197600</option>
+<option value=197700>197700</option>
+<option value=197800>197800</option>
+<option value=197900>197900</option>
+<option value=198000>198000</option>
+<option value=198100>198100</option>
+<option value=198200>198200</option>
+<option value=199000>199000</option></select>
+         #{/field}<br><br>
+ <input type=submit value=submit>
+   #{/form}
+    </div>
+   </td>
+    </tr>
+</table>
+</body>
+</html>

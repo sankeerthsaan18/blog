@@ -1,0 +1,154 @@
+<html>
+<head>
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}"> 
+<script src="@{'/public/javascripts/n.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+</head>
+
+<div class="topbar">     
+ <div class="topbar-inner">      
+  <div class="container-fluid"> 
+     <ul class="pills">     
+     <li><a class="brand" href="@{Application.index()}" class="active">IVR WIDGETS</a></li>             
+ <li ><a href="@{Application.wedding()}" >WEDDINGS</a></li>          
+  <li><a href="@{Application.medical()}" >MEDICAL ENQUIRIES</a></li>      
+      <li><a href="@{Application.fest()}">COLLEGE FESTS</a></li>        
+   <li><a href="@{Application.resr()}" >TICKET ENQUIRIES</a></li>    
+       <li><a href="@{Application.coni()}" >CONTACT US</a></li> 
+<li><a href="login" >SIGN IN</a></li> 
+<li><a href="registration" >REGISTER</a></li> 
+ </ul>
+                     
+        </div></div></div> 
+  <div class="container">      
+    <div class="row">  
+<div class="span11">
+  <h1><FONT COLOR="Brown">REGISTER</font><small>sign in or register,in order to acess the product.</small></h1> 
+
+<h1><left><font color=brown>Registration Form</font></left><small>**No Field Should Be Left Blank**</small></h1>
+<title> IVR WIDGETS</title>
+
+
+
+<form name=reg method=post onSubmit="return validate()" action="regmsg.html" >
+
+<b>User Name<b>:<br><input class="large" type="text" name="uid"><br><br>
+
+Password:<br><input class="large" type="password" name="pwd"><br><br>
+
+Confirm Password:<br><input class="large" type="password" name="tpwd"><br><br>
+
+Name:<br><input type="text" name="tname"><br><br>
+Phone number:<br><input type="text" name="tno"><br><br>
+Date of Birth:<br>
+<select class="small" name="date" id="date">
+<option value=0>dd</option>
+<option value=1>1</option>
+<option value=2>2</option>
+<option value=3>3</option>
+<option value=4>4</option>
+<option value=5>5</option>
+<option value=6>6</option>
+<option value=7>7</option>
+<option value=8>8</option>
+<option value=9>9</option>
+<option value=10>10</option>
+<option value=11>11</option>
+<option value=12>12</option>
+<option value=13>13</option>
+<option value=14>14</option>
+<option value=15>15</option>
+<option value=16>16</option>
+<option value=17>17</option>
+<option value=18>18</option>
+<option value=19>19</option>
+<option value=20>20</option>
+<option value=21>21</option>
+<option value=22>22</option>
+<option value=23>23</option>
+<option value=24>24</option>
+<option value=25>25</option>
+<option value=26>26</option>
+<option value=27>27</option>
+<option value=28>28</option>
+<option value=29>29</option>
+<option value=30>30</option>
+<option value=31>31</option></select>
+<select class="small" name=month>
+<option value=0>mm</option>
+<option value=1>Jan</option>
+<option value=2>feb</option>
+<option value=3>mar</option>
+<option value=4>apr</option>
+<option value=5>may</option>
+<option value=6>june</option>
+<option value=7>july</option>
+<option value=8>aug</option>
+<option value=9>sep</option>
+<option value=10>oct</option>
+<option value=11>nov</option>
+<option value=12>dec</option></select>
+<select class="small" name=year>
+<option value=0>yy</option>
+<option value=1>1975</option>
+<option value=2>1976</option>
+<option value=3>1977</option>
+<option value=4>1978</option>
+<option value=5>1979</option>
+<option value=6>1980</option>
+<option value=7>1981</option>
+<option value=8>1982</option>
+<option value=9>1983</option>
+<option value=10>1984</option>
+<option value=11>1985</option>
+<option value=12>1986</option>
+<option value=13>1987</option>
+<option value=14>1988</option>
+<option value=15>1989</option>
+<option value=16>1990</option></select><br><br>
+
+Country</td><td><select name=country>
+<option value=0>select</option>
+<option value=1>Australia</option>
+<option value=2>Austria</option>
+<option value=3>Bangladesh</option>
+<option value=4>Barbados</option>
+<option value=5>Bermuda</option>
+<option value=6>China</option>
+<option value=7>Cuba</option>
+<option value=8>Denmark</option>
+<option value=9>Europe</option>
+<option value=10>India</option>
+<option value=11>Pakistan</option>
+<option value=12>USA</option></select><br><br>
+
+Gender:&nbsp;&nbsp;Male<input type=radio name=gender>&nbsp;&nbsp;Female<input type=radio name=gender><br></br>
+Email Id:&nbsp;&nbsp;<input type=text name=eid><br><br>
+
+Address:&nbsp;&nbsp;</td><td><textarea name=addr></textarea><br><br><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type=submit value=submit>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type=reset value=reset><br>
+</form>  </div>
+<!----------------------------------------sign in-------------------------------------------------->
+<section id="register">
+<div class="span6">
+<table class="bordered-table"><tr><td>
+<h2><FONT COLOR="Brown">
+Sign in</font><small><b>Already a member</b></small></h2>
+<form ><br>   
+<b>USERNAME:</b><br>        
+  <input class="large" type="text" >
+<br><br>
+<b>PASSWORD:</b><br> 
+<input class="large" type="password" >        
+  <br><br>  <button class="btn" type="submit">SIGN IN</button> &nbsp&nbsp&nbsp&nbsp
+<a href="#register">forgot password?</a>      
+   </form><br><br><br><br>
+<img src="@{'/public/images/images.jpg'}" width="100%">      
+</td></tr></table> 
+</div> </div>
+
+<div style="font-size: 12px; height: 24px; line-height: 24px; color: BLACK">   
+ <marquee direction="left"  behavior="scroll" scrollamount="3"><b><h3> "Interactive Voice Response is an advanced telephone technology allowing interaction between inbound callers and an automated phone system to acquire or enter information into a database. IVR systems provides 24 hour access to a business"</h3> </marquee>
+</div>
+</body></html>

@@ -1,0 +1,93 @@
+﻿#{extends 'main.html' /}
+<html>
+    <title>IVR WIDGET</title>
+<body>
+<div class="topbar">     
+ <div class="topbar-inner">      
+  <div class="container-fluid"> 
+     <ul class="pills">     
+     <li><a class="brand" href="@{Application.index()}" class="active">IVR WIDGETS</a></li>             
+ <li ><a href="@{Application.wedding()}" >WEDDINGS</a></li>          
+  <li><a href="@{Application.medical()}" >MEDICAL ENQUIRIES</a></li>      
+      <li><a href="@{Application.fest()}">COLLEGE FESTS</a></li>        
+   <li><a href="@{Application.resr()}" >TICKET ENQUIRIES</a></li>    
+       <li><a href="@{Application.coni()}" >CONTACT US</a></li> 
+        <li><a href="@{Application.DET()}" >USERS</a></li> 
+<li><a href="logout" >SIGN OUT</a></li> 
+<li><a href="selection" >SELECTION</a></li> 
+
+ </ul>
+                     
+        </div></div></div>    
+
+<div class="container-fluid">      
+<div class="sidebar">
+<table class="bordered-table"><tr><td>
+           
+<img src="@{'/public/images/Capture.png'}"   height="80%" width="50%" /><BR><br><br>  
+
+<font color="brown"> Welcome ${username}!!!</font>
+    </td></tr><tr><td><br>
+  <b> <font color="brown">Our Widgets:</font>  </b>  <br>
+   <marquee  scrollamount="2" direction="left" loop="true" width="100%" onmouseover="this.stop()" onmouseout="this.start()"> 
+<center>
+ 
+<strong> <br>
+<i><a href="fest.html"><h5>1.COLLEGE FESTS</h5></a></i> 
+<i><a href="medical.html"><h5>2.MEDICAL ENQUIRES</h5></a></i>
+<i><a href="wedding.html"><h5>3.WEDDING EVENTS</h5></a></i>
+<i><a href="resr.html"><h5>4.TICKET ENQUIRES</h5></a></i>
+<i><a href="#"><h5>5.VOICE GREETINGS</h5></a></i> </strong></center></marquee>  
+       </td></tr>     </table>    </div>   
+  <div class="content">
+   <!-- hero unit for a primary marketing message -->    
+<table class="bordered-table"><tr><td>  
+        
+  <h2><font family="verdana" color="brown">IVR TECHNOLOGIES</font></h2>     
+     <p><H3>Thank you ${username} <H3></p>          </td></tr></table>  
+ 
+ <div class="row">       
+ <div class="span4">           
+<h5><FONT COLOR="Brown">MEDICAL ENQUIRY</font></h5> 
+
+<P>	
+<MEDIUM>  
+          To enquire about the medicine. <BR> <BR>          
+  To know availability of Doctors in Hospital<BR><BR>         
+   To take the appointment with Doctors.<BR><BR> 
+People can order their required medicine </MEDIUM> </P> </marquee>            
+        
+  </div><div class="span4">
+<H5><FONT COLOR="Brown">TICKET ENQUIRY</font></H5>
+<P>
+ <MEDIUM>  
+ To reserve the tickets.<BR><BR>             
+To know the loction and timings of the travels.<BR> <BR>          
+To leave their comments about journey in voice.<BR> 
+To get ticket details  in different traveling sectors.</MEDIUM></P>              
+       </div>  
+       <div class="span4">           
+ <h5><font color="brown">COLLEGE FESTS</font></h5>
+ 
+<P></MEDIUM>        
+To know about a fest details.<BR>  <BR>          
+To register in desired events via telepony.<BR>  <BR>         
+To know the event loction and timings.<BR>           
+To leave their expeirences and movements in the form voice. 
+<MEDIUM></P> <br><br><br><br><br>           
+</div>
+
+<div class="span4">           
+ <h5><font color="brown">WEDDINGS</font></h5>
+ 
+<P></MEDIUM>        
+To know details about a marriage venue.<BR> <BR>            
+To wish them via telepony.<BR><BR>            
+To know the  loction and timings.<BR> <BR>          
+To leave their expeirences and movements in the form voice. 
+<MEDIUM></P> <br><br><br><br><br>           
+</div>
+</div>       
+
+</body></html>
+

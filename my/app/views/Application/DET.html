@@ -1,0 +1,74 @@
+#{extends 'main.html' /}
+
+<html>
+    <title>IVR WIDGET</title>
+<body>
+<div class="topbar">     
+ <div class="topbar-inner">      
+  <div class="container-fluid"> 
+     <ul class="pills">     
+     <li><a class="brand" href="@{Application.index()}" class="active">IVR WIDGETS</a></li>             
+ <li ><a href="@{Application.wedding()}" >WEDDINGS</a></li>          
+  <li><a href="@{Application.medical()}" >MEDICAL ENQUIRIES</a></li>      
+      <li><a href="@{Application.fest()}">COLLEGE FESTS</a></li>        
+   <li><a href="@{Application.resr()}" >TICKET ENQUIRIES</a></li>    
+       <li><a href="@{Application.coni()}" >CONTACT US</a></li> 
+        <li><a href="@{Application.DET()}" >Users</a></li> 
+<li><a href="logout" >SIGN OUT</a></li> 
+<li><a href="selection" >SELECTION</a></li> 
+
+ </ul>
+                     
+        </div></div></div>    
+    <div class="sidebar">
+<img src="@{'/public/images/Capture.png'}"   height="10%" width="10%" /><BR><br><br>  
+    </div>
+     <div class="content">
+#{if start}
+    <div class="post">
+       <h2 class="post-username">
+               <a href="#">${start.username}</a>
+          </h2>
+        <div class="post-metadata">
+           <span class="post-date">${start.postedAt.format('dd MMM yy')}</span>
+        </div>
+        <div class="post-phno">
+                  phone number: ${start.phno}
+        </div>
+    </div>
+  
+
+    #{if end.size() > 1}
+        <div class="older-posts">    
+          
+        
+            #{list items:end, as:'oldPost'}
+                <div class="post">
+                    <h2 class="post-title">
+                        <a href="#">${oldPost.username}</a>
+                    </h2>
+                    <div class="post-metadata">
+                        
+                        <span class="post-date">
+                            ${oldPost.postedAt.format('dd MMM yy')}
+                        </span>
+                        <div class="post-phno">
+                     phone number:     ${oldPost.phno}
+                          </div>
+                    </div>
+                </div>
+            #{/list}
+        </div>
+        
+    #{/if}
+    
+#{/if}
+ 
+#{else}
+    <div class="empty">
+        There is currently nothing to read here.
+    </div>
+#{/else}
+</div>
+</body>
+</html>

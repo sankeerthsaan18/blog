@@ -1,0 +1,55 @@
+<html>
+<head>
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}"> 
+<script src="@{'/public/javascripts/n.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+</head>
+
+<div class="topbar">     
+ <div class="topbar-inner">      
+  <div class="container-fluid"> 
+     <ul class="pills">     
+     <li>IVR WIDGETS</li>             
+<li><a href="/">Home</a></li>  
+<li><a href="login" >SIGN IN</a></li> 
+<li><a href="registration" >REGISTER</a></li> 
+ </ul>
+                     
+        </div></div></div> 
+		#{extends 'casino/Secure/layout.html' /}
+
+<div id="login">
+	
+	<h1><FONT COLOR="Brown">Sign In</font></h1> 
+		
+	#{form @authenticate()}
+		
+		#{if flash.error}
+			<p class="error">
+				&{flash.error}
+			</p>
+		#{/if}
+		#{if flash.success}
+			<p class="success">
+				&{flash.success}
+			</p>
+		#{/if}
+	
+		<p id="username-field">
+			<label for="username">&{'secure.username'}</label>
+			<input type="text" name="username" id="username" value="${flash.username}" />
+		</p>
+		<p id="password-field">
+			<label for="password">&{'secure.password'}</label>
+			<input type="password" name="password" id="password" value="" />
+		</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="checkbox" name="remember" id="remember" value="true" ${flash.remember ? 'checked="true"' : ''} />
+			Remember me</p>
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="submit" id="signin" value="&{'secure.signin'}" />
+			<a href="@{casino.Registration.registration()}">&{'login.register.new.user'}</a>
+		
+	#{/form}
+
+	</div>

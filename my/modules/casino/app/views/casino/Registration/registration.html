@@ -1,0 +1,61 @@
+<html>
+<head>
+<link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}"> 
+<script src="@{'/public/javascripts/n.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+</head>
+
+<div class="topbar">     
+ <div class="topbar-inner">      
+  <div class="container-fluid"> 
+     <ul class="pills">     
+     <li>IVR WIDGETS</li>             
+ <li><a href="/">Home</a></li>
+<li><a href="login" >SIGN IN</a></li> 
+<li><a href="registration" >REGISTER</a></li> 
+ </ul>
+                     
+        </div></div></div> 
+		#{extends 'casino/Registration/layout.html' /}
+
+<h1><FONT COLOR="Brown">REGISTER</font></h1> 
+
+#{form @registrationFinish()}
+
+    #{if flash.error}
+        <p class="error">
+            &{flash.error}
+        </p>
+    #{/if}
+    #{if flash.success}
+        <p class="success"> &{flash.success}
+        </p>
+    #{/if}
+    <ul>
+        <li>
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" value="${flash.email}" />
+            #{ifError 'email'}<span class="error">#{error 'email' /}</span>#{/ifError}
+        </li>
+
+        <li>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" />
+            #{ifError 'password'}<span class="error">#{error 'password' /}</span>#{/ifError}
+        </li>
+        <li>
+            <label for="confirm">Password:</label>
+            <input type="password" name="confirm" id="confirm" />
+            #{ifError 'confirm'}<span class="error">#{error 'confirm' /}</span>#{/ifError}
+        </li>
+        <li>           
+            <input type="checkbox" name="acceptTermsOfService" id="acceptTermsOfService" value="true" ${flash.acceptTermsOfService ? 'checked':''}/>&{'registration.acceptTermsOfService'}             
+            #{ifError 'acceptTermsOfService'}<span class="error">#{error 'acceptTermsOfService' /}</span>#{/ifError}<br/>
+        </li>
+        <li>
+            #{ugot.recaptcha theme:"clean", tabindex:"2"/}
+        </li>
+        <li>
+            <input type="submit" id="submit" value="Create" />
+        </li>
+    </ul>
+#{/form}
